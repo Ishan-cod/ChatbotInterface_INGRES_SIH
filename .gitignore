@@ -25,6 +25,8 @@ wheels/
 # Environments
 .env
 venv/
+myenv/
+.env/
 env/
 .venv/
 
