@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python/
+build/
+dist/
+eggs/
+*.egg-info/
+.installed.txt
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+
+# Environments
+.env
+venv/
+env/
+.venv/
+
+# Editors
+.vscode/ # VS Code settings, if not shared
+.idea/ # IntelliJ IDEA settings
+
+# OS
+.DS_Store
+.Trashes
+Thumbs.db
+
+# MyPy
+.mypy_cache/
+
+# pytest
+.pytest_cache/
+*.pyc
+
+# Logs
+*.log
