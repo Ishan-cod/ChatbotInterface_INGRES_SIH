@@ -4,6 +4,10 @@ from functions.get_rechargedata import get_overallrechargeData
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import create_tool_calling_agent,AgentExecutor
+from functions.get_gwlossdata import get_gwlossdata
+from functions.get_blockcount_classification import get_blockcount_classification
+from functions.get_currentavailablegwdata import get_availableGWforFutureUseData
+from functions.get_overallstageofExtraction import get_overall_stage_of_extraction
 
 load_dotenv()
 
@@ -23,7 +27,7 @@ def chatbot(query : str, chathistory : list[dict[str,str]]|None = None):
         ("placeholder", "{agent_scratchpad}"),
     ])
 
-    tools = [get_overallrechargeData, get_rainfallrecharge]
+    tools = [get_overallrechargeData, get_rainfallrecharge, get_gwlossdata, get_blockcount_classification, get_availableGWforFutureUseData, get_overall_stage_of_extraction]
 
     llm = ChatGoogleGenerativeAI(
         model='gemini-2.0-flash',
